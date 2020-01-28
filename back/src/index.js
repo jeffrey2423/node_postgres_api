@@ -1,8 +1,5 @@
-require('dotenv').config();
-
-
 const app = require('./app');
-require('./database');
+require('./database/database');
 
 async function main() {
     //app.listen es un metodo asincrono

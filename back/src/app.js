@@ -14,13 +14,15 @@ app.set('port', process.env.PORT ||  4000);
 //enviar en este caso o entender
 app.use(morgan('dev'));
 app.use(cors());
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
 //ROUTES
 //especificamos las urls que la aplicacion de react
 //podra acceder
-//app.use('/api/calendar', require('./routes/calendar'));
+
+//app.use('/api/user', require('./routes/user'));
 //app.use('/api/users/auth', require('./routes/auth'));
 
 module.exports = app;
