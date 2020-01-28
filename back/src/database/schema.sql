@@ -1,0 +1,8 @@
+CREATE DATABASE api;
+USE api;
+CREATE TABLE users(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(250),
+  clave VARCHAR(250),
+  rol VARCHAR(250)
+)
