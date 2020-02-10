@@ -1,4 +1,4 @@
-/*const {Client } = require('pg');
+const {Client } = require('pg');
 
 const connection = new Client({
     user: process.env.USER,
@@ -15,9 +15,9 @@ connection.connect(function (err){
     }else{
         console.log('db is connected');
     }
-});*/
+});
 
-const mysql = require('mysql');
+/*const mysql = require('mysql');
 
 const connection = mysql.createConnection({
     host: process.env.HOST,
@@ -34,6 +34,6 @@ const connection = mysql.createConnection({
     } else {
       console.log('db is connected');
     }
-  });
+  });*/
 
 module.exports = connection;

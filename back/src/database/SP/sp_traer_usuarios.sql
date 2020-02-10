@@ -1,14 +1,3 @@
-CREATE DATABASE postgres_node_api;
-
-USE postgres_node_api;
-
-CREATE TABLE users(
-  id SERIAL PRIMARY KEY,
-  nombre VARCHAR(250),
-  clave VARCHAR(250),
-  rol VARCHAR(250)
-);
-
 CREATE OR REPLACE FUNCTION f_get_users()
 RETURNS SETOF users AS
 $BODY$
