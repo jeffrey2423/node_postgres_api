@@ -23,5 +23,17 @@ BEGIN
 	
 	EXCEPTION WHEN OTHERS THEN
 	GET STACKED DIAGNOSTICS v_error_stack = PG_EXCEPTION_CONTEXT;
+
+    RAISE WARNING 'The stack trace of the error is: "%"', v_error_stack;
 END
 $BODY$ LANGUAGE 'plpgsql'
+
+insert into users
+(nombre, clave, rol)
+values(
+	'jeffrey',
+	md5('123'),
+	'admin'
+);
+
+select * from f_get_users()

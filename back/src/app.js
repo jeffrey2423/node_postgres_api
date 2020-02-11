@@ -6,7 +6,7 @@ require('dotenv').config()
 const app = express();
 
 //SETTINGS
-app.set('port', process.env.PORT ||  4000);
+app.set('port', process.env.PORTSERVER ||  4000);
 
 
 //MIDDLEWARES
@@ -22,7 +22,7 @@ app.use(express.json());
 //especificamos las urls que la aplicacion de react
 //podra acceder
 
-//app.use('/api/user', require('./routes/user'));
+app.use('/api/user', require('./routes/user'));
 //app.use('/api/users/auth', require('./routes/auth'));
 
 module.exports = app;
